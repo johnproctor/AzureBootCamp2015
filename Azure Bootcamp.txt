@@ -203,3 +203,67 @@ Power BI - alternative to SSRS
 
 [Post Sharp](https://www.postsharp.net/ "https://www.postsharp.net/")
 
+
+## Azure Data Platform ##
+
+SQL Database
+SQL Azure VM
+DocumentDb
+Azure Search
+3rd Party 
+
+
+### SQL Server PAAS ###
+- Fully Managed
+- Enterprise ready HA, DR
+- Backup and replication behind the scenes
+
+Scale out with elastic scale
+Uptime of 99.99% SLA
+
+SQL Azure - not able to use Azure AD.
+
+Only two modes of using a firewall - to allow Azure Services.  All of the external pool of addresses that SQL uses are then included.
+
+Azure platform powershell commandlets.  
+
+You pay for egres and will pay for data in the same service.  Better to keep everything in one region and replicate between regions.
+
+Selecting the Right Database Edition
+- Premium for mission critical
+
+### Geo-replication ###
+- Opt-in for standard and premium databases
+- Creates a stand-by secondary
+- Replicate to pre-pared Azure region
+- Automatic, async replication
+- Microsoft managed RTO < 24h, RPO < 1h
+
+### Active geo-replication in premium ###
+RTO < 1 RPO < 5m
+
+### Auditing ###
+- logs
+- Dashboards
+- Audit logs in storage account
+
+### Elastic Scale ###
+Custom Sharding
+Scale out via .Net client libraries
+Split, merge etc
+
+### SQL on a VM ###
+
+How to optimise your database, caching, block sizes.  
+
+### DocumentDB ###
+
+Managed, scalable, queryable, schema free JSON.
+
+Consistency settings
+- Strong
+- Bounded Stateless
+- Session
+- Eventual
+
+
