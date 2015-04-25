@@ -93,3 +93,113 @@ VS Online has load testing
 
 ## Azure stream analytics ##
 
+## Lab - Cloud Services  ##
+
+Cloud Service - stateless no persisted storage.  
+Can monitor end points.
+Scaling control.
+Linked resources - can link a resource and stop the cloud service being deleted if a database exists for example
+Need to have packaged .net and configuration file.
+
+## Building Cloud Solutions ##
+
+Why use Azure:
+Can move infrastructure as is, then migrate to PAAS.
+
+-> Microsoft trying to solve problems of distributed computing.
+
+Your Service
+- Your application code
+- Required resources
+
+In the cloud:
+- Automation
+- Version environments
+- Continuous Deployment
+
+Cloud Services
+
+Focus on application
+Cloud responsible for scalability, availability, diagnostics
+Choice of:
+- VM (Server 2012 R2)
+- Worker role has .Net installed
+- Web role ASP.Net and IIS
+
+Create endpoints (port forwarding)
+- public endpoints
+- internal endpoints
+- instance input endpoints
+
+Hosts:
+- webforms or MVC
+- FastCGI - php etc
+- Multiple websites
+- Http/s
+- Web/worker hybrid
+
+Worker role patterns
+- Queue polling worker
+- Listening worker role (WCF endpoint)
+- External process worker role
+
+Use tasks rather than write multithreading code.  Just say I have some work that needs doing.  
+
+Think about other ways of dividing an writing code, e.g. orleans etc [https://github.com/dotnet/orleans ](https://github.com/dotnet/orleans "https://github.com/dotnet/orleans")
+
+## Design for Cloud ##
+
+As long as you have one server there were no issues, hardest step was from going from one to two - because of state management.
+
+Cloud is not reliable - because services are distributed you need to embrace errors - most are still transient errors.  Eg. Getting access to the database - do I need to retry after a period of time? (Eg supported in EF6).
+
+Sample architecture:
+
+US West Website
+SQL Azure
+Azure AD
+Service Bus
+CDN
+Cache
+
+[https://github.com/Azure-Readiness](https://github.com/Azure-Readiness "https://github.com/Azure-Readiness")
+
+Azure Websites Git Deployment - source code:
+[https://github.com/projectkudu/kudu](https://github.com/projectkudu/kudu "https://github.com/projectkudu/kudu")
+
+## Redundancy in Azure
+ ##
+
+- Azure storage with replicas.
+- SQL Database built-in backup servers
+- Azure Caching wih HA
+- Multi instance Azure WEbsites and Loud Services
+- Load balanced virtual machines
+- Virtual networks
+- Traffic manager for failover
+
+Power BI - alternative to SSRS 
+[https://www.microsoft.com/en-us/powerbi/default.aspx](https://www.microsoft.com/en-us/powerbi/default.aspx "https://www.microsoft.com/en-us/powerbi/default.aspx")
+
+## Reliability ##
+
+- Auto recovery
+- VIP Swap
+- Fault domain
+- VM Availability set
+
+## What does failsafe mean for my applications? ##
+
+- Take advantage of Azure features
+- Avoid single point of failure
+- Failure mode analysis
+- Some errors are transient
+- Graceful degredation 
+
+- Use Service bus for communication between apps - already deals with with transient faults
+
+[https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx "https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx")
+
+
+[Post Sharp](https://www.postsharp.net/ "https://www.postsharp.net/")
+
