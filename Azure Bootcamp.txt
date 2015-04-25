@@ -1,0 +1,95 @@
+# Azure Bootcamp 25th April #
+
+## How MS present Azure - The Cloud for Modern Business ##
+
+Why the cloud?
+1.  Speed
+2.  Scale
+3.  Economics
+
+Pizza as a service example:
+
+Hosting Models
+- On prem (Pizza made at home)
+- Infrastructure as a service (Bake at home)
+- Platform as a service (Take away)
+Business Models
+- SAAS (Eat out)
+
+Azure footprint - 19 regions (as of April 2015)
+
+Datacenters owned and operated by MS. 
+
+Azure SQL Scale Out
+https://www.pottermore.com/
+
+Used PAAS. Had 160million requests in 24h.  SQL as a service. Web roles for site and set to autoscale.  
+
+Monthly SLA
+
+- Offer SLA on different services, look at SLA for service when comparing. 
+
+
+## Virtual Machines ##
+
+Getting started:
+- Management portal
+- Scripting
+- REST Api
+	- Rest API docs have a date header, so you can go back to old APIs
+- Comprehensive networking
+
+Most people do command and control using powershell
+
+- Select image size and VM, can upload your own vhd
+
+
+## SQL Database ##
+
+- SQL as a Service
+- Fully managed
+- Enterprise ready with automatic support for HA
+- Elastic scale out
+- Can scale based on DTUs
+- Support for TDS and ODBC
+- Cross datacenter failover and backups to support disaster recovery scenarios (see scott gu on channel 9)
+
+## HDInsights (Hadoop) ##
+
+## Azure ML ##
+
+## App Service Web Apps (Azure Websites) ##
+
+Can rollback versions
+
+App service:
+- Web Apps
+- Mobile Apps
+- Logic Apps
+- API Apps
+
+## Visual Studio - Application Insights ##
+
+Application telemetary.
+Now point and click.
+
+VS Online has load testing
+
+## Azure AD ##
+
+## Media Services ##
+
+## Internet of Things ##
+
+- Event Hubs
+- Notification Hubs
+- Stream Analytics
+- ML
+- HDInsight
+
+## Azure Data Factory ##
+
+- Take files and put into Azure data sources
+
+## Azure stream analytics ##
+
